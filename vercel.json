@@ -12,6 +12,10 @@
 
     "routes": [
         {
+            "src": "/img/(.*)",
+            "dest": "/public/img/"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
