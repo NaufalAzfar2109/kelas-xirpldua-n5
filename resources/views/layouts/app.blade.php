@@ -14,7 +14,6 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
-    @vite(['resources/css/site.css', 'resources/js/site.js'])
 </head>
 
 <body>
