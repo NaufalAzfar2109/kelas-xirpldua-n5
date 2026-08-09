@@ -13,13 +13,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/site.css') }}">
+    <link rel="stylesheet" href="/css/site.css">
 </head>
 
 <body>
     @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('/js/site.js') }}"></script>
+    <script src="/js/site.js"></script>
 </body>
 
 </html>
