@@ -16,6 +16,14 @@
             "dest": "/public/img/"
         },
         {
+            "src": "/css/(.*)",
+            "dest": "/public/css/"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/public/js/"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
