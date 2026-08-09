@@ -4,7 +4,7 @@
 
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.4"
+            "runtime": "vercel-php@0.6.0"
         }
     },
 
@@ -17,18 +17,11 @@
 
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://kelas-xirpl2-n5.vercel.app",
-
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-
-        "CACHE_DRIVER": "array",
+        "APP_KEY" : "base64:MJS68P5clUeWflLKrjRdCtDGNbsPfjseSQJ2O6iSSS8=",
         "LOG_CHANNEL": "stderr",
+        "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie"
     }
 }
