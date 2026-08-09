@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/site.css">
+    <link rel="icon" type="image/png" href="/img/logo_rounded.png">
 </head>
 
 <body>
