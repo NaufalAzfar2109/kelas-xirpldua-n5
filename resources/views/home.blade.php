@@ -5,7 +5,7 @@
 @section('content')
     <nav class="site-nav" id="mainNavbar">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="#beranda" class="brand"><img src="../../public/images/logo_rounded.png" alt="logo" style="width: 3rem;"></span><span>Kelas
+            <a href="#beranda" class="brand"><img src="../images/logo_rounded.png" alt="logo" style="width: 3rem;"></span><span>Kelas
                     XI RPL 2<small>SMK · Rekayasa Perangkat Lunak</small></span></a>
             <div class="nav-links d-none d-lg-flex"><a href="#beranda">Beranda</a><a href="#anggota">Anggota</a><a
                     href="#jadwal">Jadwal</a><a href="#kesepakatan">Kesepakatan</a></div>
