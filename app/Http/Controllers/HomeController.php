@@ -18,7 +18,7 @@ class HomeController extends Controller
             'Asyarafa Dzikrillah',
             'Avreza Fendi Pratama',
             'Bayu Pratama',
-            'Chaidir Alpasha',
+            'Chaidir Al Pasha',
             'Cristina Sandi Dely S.',
             'Depita Kalyani',
             'Dian Ayu Oktavia',
@@ -61,7 +61,7 @@ class HomeController extends Controller
             ['initials' => 'NA', 'name' => 'Naasiq Al Ahsani', 'role' => 'Keamanan 2'],
             ['initials' => 'MR', 'name' => 'Muhammad Raziq Farras', 'role' => 'Kesehatan 1'],
             ['initials' => 'MK', 'name' => 'M. Kosim Fadli', 'role' => 'Kesehatan 2'],
-            ['initials' => 'CA', 'name' => 'Chaidir Al—Pasha', 'role' => 'Olahraga 1'],
+            ['initials' => 'CA', 'name' => 'Chaidir Al Pasha', 'role' => 'Olahraga 1'],
             ['initials' => 'MH', 'name' => 'Muhammad Haqin Nazili', 'role' => 'Olahraga 2'],
         ];
 

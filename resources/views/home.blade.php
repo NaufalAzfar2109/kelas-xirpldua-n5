@@ -56,7 +56,7 @@
     <section id="anggota" class="section">
         <div class="container">
             <div class="eyebrow reveal"><span></span> Anggota Kelas</div>
-            <h2 class="reveal">Kenali Teman Sekelas</h2>
+            <h2 class="reveal">Siswa/i Kelas XI RPL 2</h2>
             <p class="lead-text reveal">36 siswa, satu tujuan. Berikut struktur inti dan daftar lengkap anggota Kelas XI RPL
                 2.</p>
             <div class="org-chart reveal" aria-label="Struktur organisasi kelas">
