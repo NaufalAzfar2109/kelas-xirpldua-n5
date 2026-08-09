@@ -101,7 +101,7 @@
         .hero {
             min-height: 760px;
             padding: 12rem 0 4rem;
-            background: url("../../../public/images/background.jpg") center/cover;
+            background: url("/images/background.jpg") center/cover;
         }
 
         .hero-shade {
