@@ -170,7 +170,7 @@
             <div class="footer-brand"><b>KELAS XI RPL 2</b>
                 <p>“RPL! Luarbiasa!”</p>
             </div><small>© 2026 Kelas XI RPL 2 <span>|</span> Di Kelola Oleh Siswa RPL 2</small><a class="instagram-link"
-                href="https://instagram.com/xirpl2" target="_blank" rel="noopener noreferrer"
+                href="https://instagram.com/https.xirpl2" target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram Kelas XI RPL 2"><i class="bi bi-instagram"></i> <span>@https.xirpl2</span></a>
         </div>
     </footer>
