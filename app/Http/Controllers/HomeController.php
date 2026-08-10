@@ -77,11 +77,18 @@ class HomeController extends Controller
         ];
 
         $schedule = [
-            ['period' => '1 – 2', 'time' => '07.20–08.30', 'days' => ['—', '—', '—', '—', '—']],
-            ['period' => '3 – 4', 'time' => '08.30–10.00', 'days' => ['—', '—', '—', '—', '—']],
-            ['period' => 'Istirahat', 'time' => '10.00–10.15', 'days' => ['Istirahat', 'Istirahat', 'Istirahat', 'Istirahat', 'Istirahat']],
-            ['period' => '5 – 6', 'time' => '10.15–11.45', 'days' => ['—', '—', '—', '—', '—']],
-            ['period' => '7 – 8', 'time' => '11.45–13.15', 'days' => ['—', '—', '—', '—', '—']],
+            ['period' => '1', 'time' => '07.20–08.00', 'days' => ['KK [ PAK YUSUF ]', 'KK [ PAK YUSUF ]', 'KK [ BU RENA ]', 'PJOK', '—']],
+            ['period' => '2', 'time' => '08.00–08.40', 'days' => ['KK [ PAK YUSUF ]', 'KK [ PAK YUSUF ]', 'KK [ BU RENA ]', 'PJOK', '—']],
+            ['period' => '3', 'time' => '08.40–09.20', 'days' => ['KK [ PAK YUSUF ]', 'KK [ PAK YUSUF ]', 'KK [ BU RENA ]', 'B. INGGRIS', 'PPKn']],
+            ['period' => '4', 'time' => '09.20–10.00', 'days' => ['KK [ PAK YUSUF ]', 'KK [ PAK YUSUF ]', 'KK [ BU RENA ]', 'B. INGGRIS', 'PPKn']],
+            ['period' => 'Istirahat', 'time' => '10.00–10.40', 'days' => ['Istirahat', 'Istirahat', 'Istirahat', 'Istirahat', 'Istirahat']],
+            ['period' => '5', 'time' => '10.40–11.20', 'days' => ['KK [ PAK YUSUF ]', 'KK [ PAK YUSUF ]', 'MATEMATIKA', 'B. INGGRIS', 'MPP']],
+            ['period' => '6', 'time' => '11.20–12.00', 'days' => ['SEJARAH', 'KIK', 'MATEMATIKA', 'B. INGGRIS', 'MPP']],
+            ['period' => 'Istirahat', 'time' => '12.00–13.00', 'days' => ['Istirahat', 'Istirahat', 'Istirahat', 'Istirahat', 'Istirahat']],
+            ['period' => '7', 'time' => '13.00–13.30', 'days' => ['SEJARAH', 'KIK', 'MATEMATIKA', 'KK [ BU RENA ]', 'MPP']],
+            ['period' => '8', 'time' => '13.30–14.10', 'days' => ['PABP', 'KIK', 'B. INDO', 'KK [ BU RENA ]', 'MPP']],
+            ['period' => '9', 'time' => '14.10–14.40', 'days' => ['PABP', 'KIK', 'B. INDO', 'KK [ BU RENA ]', '—']],
+            ['period' => '10', 'time' => '14.40–15.20', 'days' => ['PABP', 'KIK', 'B. INDO', 'KK [ BU RENA ]', '—']],
         ];
 
         $duties = [
