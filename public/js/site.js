@@ -63,7 +63,7 @@ const sectionTitles = {
 
 const updateTitle = () => {
     const section = window.location.hash.substring(1) || 'beranda';
-    document.title = `Kelas XI RPL 2 - ${
+    document.title = `Kelas XI RPL 2 — ${
         sectionTitles[section] || 'Beranda'
     }`;
 };
@@ -75,7 +75,7 @@ window.addEventListener('hashchange', updateTitle);
 window.addEventListener('load', () => {
     if (window.location.hash) {
         history.replaceState(null, '', window.location.pathname);
-        document.title = 'Kelas XI RPL 2 - Beranda';
+        document.title = 'Kelas XI RPL 2 — Beranda';
     }
 
     window.scrollTo(0, 0);
