@@ -29,8 +29,7 @@
             <div class="col-lg-8 px-0">
                 <div class="eyebrow"><span></span> Hi, Visitor!</div>
                 <h1><em>WELCOME</em><br>TO XI RPL 2</h1>
-                <p>Ruang digital resmi Kelas XI RPL 2 — tempat kami berbagi jadwal, anggota, dan kesepakatan kelas dalam
-                    satu halaman yang rapi dan mudah diakses.</p>
+                <p>Website resmi Kelas XI RPL 2  <strong>&bull;</strong> Rekayasa Perangkat Lunak adalah tempat kami belajar, bereksperimen, menciptakan karya melalui kode dan teknologi, serta terus berkembang untuk meraih prestasi.</p>
                 <span class="year-badge"><i class="bi bi-calendar3 me-2"></i>Tahun Ajaran 2026 / 2027</span>
             </div>
             <div class="row g-3 pt-5 mt-3">
