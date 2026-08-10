@@ -1,3 +1,13 @@
+if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
+}
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('mainNavbar');
     const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 30);
@@ -42,3 +52,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const menu = document.getElementById('mobileMenu');
         window.bootstrap?.Offcanvas.getOrCreateInstance(menu).hide();
     }));
+
+const sectionTitles = {
+    beranda: 'Beranda',
+    anggota: 'Anggota',
+    jadwal: 'Jadwal',
+    struktur: 'Struktur',
+    kesepakatan: 'Kesepakatan'
+};
+
+const updateTitle = () => {
+    const section = window.location.hash.substring(1) || 'beranda';
+    document.title = `Kelas XI RPL 2 - ${
+        sectionTitles[section] || 'Beranda'
+    }`;
+};
+
+updateTitle();
+
+window.addEventListener('hashchange', updateTitle);
+
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname);
+        document.title = 'Kelas XI RPL 2 - Beranda';
+    }
+
+    window.scrollTo(0, 0);
+});
