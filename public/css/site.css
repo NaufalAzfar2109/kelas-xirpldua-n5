@@ -92,7 +92,7 @@ body {
     gap: 0.8rem;
     align-items: center;
     color: var(--gold);
-    font-size: 0.74rem;
+    font-size: 0.80rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
 }
@@ -431,7 +431,7 @@ footer a {
     background: linear-gradient(180deg, var(--navy) 0%, #101c31 100%);
 }
 section[id] {
-    scroll-margin-top: 76px;
+    scroll-margin-top: 69px;
 }
 .footer-content {
     min-height: 82px;

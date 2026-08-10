@@ -31,7 +31,7 @@
                 <h1><em>WELCOME</em><br>TO XI RPL 2</h1>
                 <p>Ruang digital resmi Kelas XI RPL 2 — tempat kami berbagi jadwal, anggota, dan kesepakatan kelas dalam
                     satu halaman yang rapi dan mudah diakses.</p>
-                <span class="year-badge"><i class="bi bi-calendar3"></i> Tahun Ajaran 2025 / 2026</span>
+                <span class="year-badge"><i class="bi bi-calendar3 me-2"></i>Tahun Ajaran 2026 / 2027</span>
             </div>
             <div class="row g-3 pt-5 mt-3">
                 <div class="col-md-4">
