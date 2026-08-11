@@ -133,6 +133,9 @@ h1 em {
     color: var(--gold);
     font-size: 0.82rem;
 }
+.kotak a {
+    text-decoration: none;
+}
 .stat-card {
     display: flex;
     gap: 1rem;
@@ -153,6 +156,7 @@ h1 em {
 }
 .stat-card b {
     font: 700 1.7rem Poppins;
+    color: white;
 }
 .stat-card span {
     color: var(--muted);
@@ -378,12 +382,15 @@ footer a {
 }
 .reveal {
     opacity: 0;
-    transform: translateY(18px);
-    transition: 0.6s ease;
+    transform: translateY(25px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
 }
+
 .reveal.visible {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 @media (max-width: 767px) {
     .hero {
@@ -440,6 +447,7 @@ section[id] {
     display: grid !important;
     grid-template-columns: 1fr auto 1fr;
     gap: 1.5rem;
+    align-items: end;
 }
 .footer-brand b {
     font-size: 1.05rem;
@@ -452,6 +460,7 @@ section[id] {
     font-size: 0.62rem;
     color: rgba(245, 243, 238, 0.62);
     text-align: center;
+    align-self: end;
 }
 .footer-content small span {
     margin: 0 0.35rem;

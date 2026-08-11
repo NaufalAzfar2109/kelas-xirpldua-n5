@@ -6,7 +6,16 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
-window.scrollTo(0, 0);
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
+window.addEventListener('load', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('mainNavbar');
@@ -14,13 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll);
     onScroll();
 
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    }), { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+document.querySelectorAll('.reveal').forEach((element) => {
+    revealObserver.observe(element);
+});
 
     const descriptions = {
         lessons: 'Jadwal pelajaran Kelas XI RPL 2, berlaku setiap hari Senin hingga Jumat.',

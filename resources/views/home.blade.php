@@ -34,21 +34,27 @@
                     prestasi.</p>
                 <span class="year-badge"><i class="bi bi-calendar3 me-2"></i>Tahun Ajaran 2026 / 2027</span>
             </div>
-            <div class="row g-3 pt-5 mt-3">
+            <div class="row g-3 pt-5 mt-3 kotak">
                 <div class="col-md-4">
-                    <div class="stat-card"><i class="bi bi-people-fill"></i>
-                        <div><b>{{ count($students) }}</b><span>Jumlah Siswa</span></div>
-                    </div>
+                    <a href="#anggota">
+                        <div class="stat-card"><i class="bi bi-people-fill"></i>
+                            <div><b>{{ count($students) }}</b><span>Jumlah Siswa</span></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="stat-card"><i class="bi bi-journal-bookmark-fill"></i>
-                        <div><b>15</b><span>Jumlah Mapel</span></div>
-                    </div>
+                    <a href="#jadwal">
+                        <div class="stat-card"><i class="bi bi-journal-bookmark-fill"></i>
+                            <div><b>15</b><span>Jumlah Mapel</span></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
+                    <a href="#beranda">
                     <div class="stat-card"><i class="bi bi-person-video3"></i>
                         <div><b>12</b><span>Jumlah Guru Pengajar</span></div>
                     </div>
+                </a>
                 </div>
             </div>
         </div>
