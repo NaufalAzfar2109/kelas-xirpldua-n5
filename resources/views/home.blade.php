@@ -51,10 +51,10 @@
                 </div>
                 <div class="col-md-4">
                     <a href="#beranda">
-                    <div class="stat-card"><i class="bi bi-person-video3"></i>
-                        <div><b>12</b><span>Jumlah Guru Pengajar</span></div>
-                    </div>
-                </a>
+                        <div class="stat-card"><i class="bi bi-person-video3"></i>
+                            <div><b>12</b><span>Jumlah Guru Pengajar</span></div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -94,24 +94,30 @@
                     data-tab="duties">Piket</button></div>
             <p id="tabDescription" class="lead-text reveal">Jadwal pelajaran Kelas XI RPL 2, berlaku setiap hari Senin
                 hingga Jumat.</p>
-            <article class="today-card reveal" id="todayCard" data-duties='@json($duties)'></article>
+            <article class="today-card reveal" id="todayCard" data-duties='@json($duties)'
+                data-schedule='@json($schedule)'></article>
             <div id="lessons" class="tab-panel reveal">
                 <div class="table-wrap">
                     <table>
                         <thead>
                             <tr>
                                 <th>Jam Ke</th>
-                                <th>Senin</th>
-                                <th>Selasa</th>
-                                <th>Rabu</th>
-                                <th>Kamis</th>
-                                <th>Jumat</th>
+                                <th data-day="Senin">Senin</th>
+                                <th data-day="Selasa">Selasa</th>
+                                <th data-day="Rabu">Rabu</th>
+                                <th data-day="Kamis">Kamis</th>
+                                <th data-day="Jumat">Jumat</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($schedule as $period)
-                                <tr class="{{ $period['period'] === 'Istirahat' ? 'break-row' : '' }}">
-                                    <td><strong>{{ $period['period'] }}</strong><small>{{ $period['time'] }}</small></td>
+                                <tr class="{{ $period['period'] === 'Istirahat' ? 'break-row' : '' }}"
+                                    data-period="{{ $period['period'] }}">
+                                    <td>
+                                        <strong>{{ $period['period'] }}</strong>
+                                        <small>{{ $period['time'] }}</small>
+                                    </td>
+
                                     @foreach ($period['days'] as $lesson)
                                         <td>{{ $lesson }}</td>
                                     @endforeach

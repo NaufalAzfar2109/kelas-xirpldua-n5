@@ -52,11 +52,33 @@ body {
 }
 .nav-links a,
 .offcanvas a {
-position: relative;
+    position: relative;
     color: var(--ivory);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.45rem;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+.nav-links a.active {
+    color: var(--gold);
+}
+.nav-links a.active::after {
+    transform: scaleX(1);
 }
 .nav-links a:hover,
 .offcanvas a:hover {
@@ -94,7 +116,7 @@ position: relative;
     gap: 0.8rem;
     align-items: center;
     color: var(--gold);
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
 }
@@ -241,17 +263,33 @@ h2 {
     margin: 2rem 0 1rem;
 }
 .tabs button {
+    position: relative;
     border: 0;
     background: none;
     color: var(--muted);
-    padding: 0;
+    padding: 0 0 5px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font: 600 0.95rem Poppins;
     cursor: pointer;
+    text-decoration: none !important;
+}
+
+.tabs button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.35s ease;
 }
 .tabs button.active {
     color: var(--gold);
+}
+.tabs button.active::after {
+    width: 100%;
 }
 .tabs i {
     color: var(--gold);
@@ -329,6 +367,7 @@ td small {
     display: block;
     margin-top: 0.25rem;
     color: rgba(245, 243, 238, 0.4);
+    font-size: 0.7rem;
 }
 .break-row td {
     background: rgba(255, 255, 255, 0.03);
@@ -416,7 +455,6 @@ footer a {
         margin-top: 0.7rem;
     }
 }
-/* Seamless hero-to-members transition and footer refinements. */
 .hero {
     position: relative;
     overflow: hidden;
@@ -640,4 +678,181 @@ section[id] {
     .offcanvas-body.fs-5 a {
         font-size: 0.86rem;
     }
+    .offcanvas a.active {
+        color: var(--gold);
+    }
+    .offcanvas a.active::after {
+        display: none;
+    }
+}
+
+.today-lessons {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.today-lesson {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.today-lesson span {
+    min-width: 90px;
+    color: var(--gold);
+    font-size: 0.75rem;
+}
+
+.today-lesson strong {
+    color: var(--ivory);
+    font-size: 0.8rem;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #8ee2a6;
+    animation: liveBlink 1.2s ease-in-out infinite;
+}
+
+@keyframes liveBlink {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.25;
+        transform: scale(0.75);
+    }
+}
+
+.today-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.today-header .live {
+    align-self: center;
+    white-space: nowrap;
+}
+
+table th.today-column {
+    background: rgba(201, 166, 107, 0.32);
+    color: var(--gold);
+}
+
+table td.today-column {
+    background: rgba(201, 166, 107, 0.10);
+    color: var(--ivory);
+    transition: background 0.3s ease;
+}
+
+.today-schedule-dropdown {
+    margin-top: 1.5rem;
+}
+
+.today-schedule-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    background: none;
+    color: var(--ivory);
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.today-schedule-toggle span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.today-schedule-toggle span i {
+    color: var(--gold);
+}
+
+.today-schedule-toggle > i {
+    color: var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.today-schedule-toggle.open > i {
+    transform: rotate(180deg);
+}
+
+.today-schedule-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.today-schedule-content.open {
+    max-height: 1000px;
+}
+
+.today-schedule-content .table-wrap {
+    margin-top: 1rem;
+}
+
+.today-schedule-table {
+    width: 100%;
+    min-width: 0;
+    border-collapse: collapse;
+}
+
+.today-schedule-table th,
+.today-schedule-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.8rem;
+}
+
+.today-schedule-table th {
+    background: rgba(201, 166, 107, 0.16);
+    color: var(--gold);
+    font: 600 0.75rem Poppins;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.today-schedule-table td {
+    color: var(--muted);
+}
+
+.today-schedule-table td:first-child {
+    width: 120px;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+.today-schedule-table td small {
+    display: block;
+    margin-top: 0.25rem;
+    white-space: nowrap;
+    color: rgba(245, 243, 238, 0.4);
+    font-size: 0.7rem;
+}
+
+.today-schedule-table td strong {
+    color: var(--ivory);
 }
